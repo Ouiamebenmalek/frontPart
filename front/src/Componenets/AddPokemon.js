@@ -42,7 +42,7 @@ export default class AddPokemon extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     console.log("okokok")
-    fetch("http://localhost:3000/pokemons",
+    fetch("https://backendpokemon-production.up.railway.app/pokemons",
       {
         method: 'POST',
         headers: {
@@ -119,7 +119,7 @@ export default class AddPokemon extends Component {
   };
 
   addPKM = async function (e) {
-    fetch("http://localhost:3000/pokemons",
+    fetch("https://backendpokemon-production.up.railway.app/pokemons",
       {
         method: 'POST',
         headers: {

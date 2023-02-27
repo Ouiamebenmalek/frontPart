@@ -22,7 +22,7 @@ export default class AddTrainer extends Component{
 
 
            
-          fetch("http://localhost:3000/trainers", 
+          fetch("https://backendpokemon-production.up.railway.app/trainers", 
           {  
             method: 'POST',
             headers: {

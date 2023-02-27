@@ -16,7 +16,7 @@ export default class AllPokemons extends Component {
   };
   async componentDidMount() {
     try {
-      const response = await fetch("http://localhost:3000/pokemons");
+      const response = await fetch("https://backendpokemon-production.up.railway.app/pokemons");
       const json = await response.json();
       this.setState(
         {
@@ -43,7 +43,7 @@ export default class AllPokemons extends Component {
       async () => {
         try {
           const response = await fetch(
-            "http://localhost:3000/pokemons/" + this.state.search,
+            "https://backendpokemon-production.up.railway.app/" + this.state.search,
             { method: "GET" }
           );
           const json = await response.json();
@@ -69,7 +69,7 @@ export default class AllPokemons extends Component {
       loading: true,
 
     },async ()=> {   try {
-      const response = await fetch('http://localhost:3000/pokemons/'+id, { method: 'DELETE' });
+      const response = await fetch('https://backendpokemon-production.up.railway.app/pokemons/'+id, { method: 'DELETE' });
       const json = await response.json();
       this.setState({
         pokemons: json,

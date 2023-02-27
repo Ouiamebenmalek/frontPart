@@ -26,7 +26,7 @@ export default class UpdateTrainer extends Component {
   async handleSubmit(event) {
     event.preventDefault();
     console.log(this.props.trainer.id);
-    await fetch(`http://localhost:3000/trainers/${this.props.trainer.id}`, {
+    await fetch(`https://backendpokemon-production.up.railway.app/trainers/${this.props.trainer.id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
